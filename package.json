@@ -1,0 +1,25 @@
+{
+  "name": "dsa-exercises",
+  "version": "1.0.0",
+  "description": "I will be solving questions from Grind 75 with a schedule of 26 weeks and 2 hours per week in order to reinforce Data Structures and Algorithms concepts. ## Languages The languages I will be using for my solutions will be in Typescript and Python, the two languages I am most comfortable with. ### Week 1 - Two Sum - Valid Parenthesis - Merge Two Sorted Lists",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfredoPark-48/dsa-exercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfredoPark-48/dsa-exercises/issues"
+  },
+  "homepage": "https://github.com/alfredoPark-48/dsa-exercises#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "typescript": "^5.0.4"
+  }
+}
