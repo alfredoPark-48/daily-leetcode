@@ -8,6 +8,7 @@
 # Input: nums = [1], k = 1
 # Output: [1]
 
+
 def top_k_frequent(nums, k):
     num_map = {}
     frequent_nums = [[] for i in range(len(nums) + 1)]
@@ -19,9 +20,9 @@ def top_k_frequent(nums, k):
 
     for num, count in num_map.items():
         frequent_nums[count].append(num)
-    
+
     result = []
-    for i in range(len(frequent_nums) - 1, 0, - 1):
+    for i in range(len(frequent_nums) - 1, 0, -1):
         for num in frequent_nums[i]:
             result.append(num)
             if len(result) == k:
@@ -29,5 +30,5 @@ def top_k_frequent(nums, k):
                 return result
 
 
-top_k_frequent([1,1,1,2,2,3], 2)
+top_k_frequent([1, 1, 1, 2, 2, 3], 2)
 top_k_frequent([1], 1)
