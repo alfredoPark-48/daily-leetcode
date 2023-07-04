@@ -14,12 +14,16 @@
 # Output: [["a"]]
 
 import unittest
-
+from collections import defaultdict
 
 def group_anagrams(strs):
-    
-    pass
-
+    anagrams = defaultdict(list)
+    for string in strs:
+        count = [0] * 26
+        for char in string:
+            count[ord('a')-ord(char)] += 1
+        anagrams[tuple(count)].append(string)
+    return list(anagrams.values())
 
 class GroupAnagramsTest(unittest.TestCase):
     def test_case1(self):
