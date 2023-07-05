@@ -21,15 +21,14 @@
 import unittest
 
 def two_sum(numbers, target):
-    pointer_one = 0
-    pointer_two = len(numbers) - 1
-    while pointer_one < pointer_two:
-        if numbers[pointer_one] + numbers[pointer_two] == target:
-            return [pointer_one + 1, pointer_two + 1]
-        elif numbers[pointer_one] + numbers[pointer_two] > target:
-            pointer_two -= 1
+    left_pointer, right_pointer = 0, len(numbers) - 1
+    while left_pointer < right_pointer:
+        if numbers[left_pointer] + numbers[right_pointer] == target:
+            return [left_pointer + 1, right_pointer + 1]
+        elif numbers[left_pointer] + numbers[right_pointer] < target:
+            left_pointer += 1
         else:
-            pointer_one += 1
+            right_pointer -= 1
     return []
 
 class TestTwoSum(unittest.TestCase):
